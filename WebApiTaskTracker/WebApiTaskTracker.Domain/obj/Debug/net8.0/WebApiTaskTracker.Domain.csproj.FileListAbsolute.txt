@@ -1,0 +1,11 @@
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\bin\Debug\net8.0\WebApiTaskTracker.Domain.deps.json
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\bin\Debug\net8.0\WebApiTaskTracker.Domain.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\bin\Debug\net8.0\WebApiTaskTracker.Domain.pdb
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\WebApiTaskTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\WebApiTaskTracker.Domain.AssemblyInfoInputs.cache
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\WebApiTaskTracker.Domain.AssemblyInfo.cs
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\WebApiTaskTracker.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\WebApiTaskTracker.Domain.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\refint\WebApiTaskTracker.Domain.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\WebApiTaskTracker.Domain.pdb
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\ref\WebApiTaskTracker.Domain.dll

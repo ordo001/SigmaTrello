@@ -1,0 +1,14 @@
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\bin\Debug\net8.0\WebApiTaskTracker.Infrastructure.deps.json
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\bin\Debug\net8.0\WebApiTaskTracker.Infrastructure.runtimeconfig.json
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\bin\Debug\net8.0\WebApiTaskTracker.Infrastructure.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\bin\Debug\net8.0\WebApiTaskTracker.Infrastructure.pdb
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.AssemblyInfo.cs
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\refint\WebApiTaskTracker.Infrastructure.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.pdb
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.genruntimeconfig.cache
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\ref\WebApiTaskTracker.Infrastructure.dll
