@@ -12,7 +12,7 @@ namespace WebApiTaskTracker.Api
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            
+
             // Add services to the container.
 
             builder.Services.AddControllers();
@@ -25,7 +25,7 @@ namespace WebApiTaskTracker.Api
             builder.Services.AddScoped<IUserBoardRepository, UserBoardRepository>();
 
             builder.Services.AddDbContext<TaskTrackerContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+                options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
