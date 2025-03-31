@@ -38,16 +38,36 @@ namespace WebApiTaskTracker.Infrastructure.Data
                 .WithMany(b => b.Sections)
                 .HasForeignKey(s => s.IdBoard);
 
+            modelBuilder.Entity<Section>().
+                Property(u => u.Id).
+                HasColumnType("uuid").
+                ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<User>().
+                Property(u => u.Id).
+                HasColumnType("uuid").
+                ValueGeneratedOnAdd();
+
             modelBuilder.Entity<Card>()
                 .HasOne(c => c.Section)
                 .WithMany(s => s.Cards)
                 .HasForeignKey(c => c.IdSection);
+
+            modelBuilder.Entity<Card>().
+                Property(u => u.Id).
+                HasColumnType("uuid").
+                ValueGeneratedOnAdd();
 
             modelBuilder.Entity<Card>()
                 .HasOne(c => c.User)
                 .WithMany()
                 .HasForeignKey(c => c.IdUser)
                 .OnDelete(DeleteBehavior.SetNull);
+
+            modelBuilder.Entity<Board>().
+                Property(u => u.Id).
+                HasColumnType("uuid").
+                ValueGeneratedOnAdd();
         }
     }
 }

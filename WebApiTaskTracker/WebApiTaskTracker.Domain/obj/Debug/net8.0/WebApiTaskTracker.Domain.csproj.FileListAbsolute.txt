@@ -9,3 +9,4 @@ C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTas
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\refint\WebApiTaskTracker.Domain.dll
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\WebApiTaskTracker.Domain.pdb
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\ref\WebApiTaskTracker.Domain.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Domain\obj\Debug\net8.0\WebApiTaskTracker.Domain.sourcelink.json

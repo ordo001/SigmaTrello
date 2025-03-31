@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "WebApiTaskTracker.Application/1.0.0": {
+        "dependencies": {
+          "WebApiTaskTracker.Domain": "1.0.0"
+        },
         "runtime": {
           "WebApiTaskTracker.Application.dll": {}
+        }
+      },
+      "WebApiTaskTracker.Domain/1.0.0": {
+        "runtime": {
+          "WebApiTaskTracker.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "WebApiTaskTracker.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebApiTaskTracker.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

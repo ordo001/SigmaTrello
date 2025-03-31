@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApiTaskTracker.Domain
+namespace WebApiTaskTracker.Domain.DTO
 {
-    public class Board
+    public class AddBoardRequest
     {
-        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+        public Guid IdOwner { get; set; } = Guid.Empty;
 
 
-        private readonly List<UserBoard> _userBoards = new();
-        public IReadOnlyCollection<UserBoard> UserBoards => _userBoards.AsReadOnly();
+
     }
 }

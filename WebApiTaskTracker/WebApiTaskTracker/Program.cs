@@ -1,8 +1,11 @@
-using WebApiTaskTracker.Infrastructure;
-using WebApiTaskTracker.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using WebApiTaskTracker.Application.Servises;
+using WebApiTaskTracker.Domain.Interfaces.Repositories;
+using WebApiTaskTracker.Domain.Interfaces.Services;
+using WebApiTaskTracker.Infrastructure.Data;
+using WebApiTaskTracker.Infrastructure.Repositories;
 
-namespace WebApiTaskTracker
+namespace WebApiTaskTracker.Api
 {
     public class Program
     {
@@ -13,9 +16,13 @@ namespace WebApiTaskTracker
             // Add services to the container.
 
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddScoped<IUserServices, UserServices>();
+            builder.Services.AddScoped<IBoardServices, BoardServices>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IBoardRepository, BoardRepository>();
+            builder.Services.AddScoped<IUserBoardRepository, UserBoardRepository>();
 
             builder.Services.AddDbContext<TaskTrackerContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

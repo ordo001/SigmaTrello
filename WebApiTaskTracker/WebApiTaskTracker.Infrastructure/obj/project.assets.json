@@ -875,6 +875,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "WebApiTaskTracker.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/WebApiTaskTracker.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApiTaskTracker.Domain.dll": {}
+        }
       }
     }
   },
@@ -2285,6 +2295,11 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "WebApiTaskTracker.Domain/1.0.0": {
+      "type": "project",
+      "path": "../WebApiTaskTracker.Domain/WebApiTaskTracker.Domain.csproj",
+      "msbuildProject": "../WebApiTaskTracker.Domain/WebApiTaskTracker.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2292,7 +2307,8 @@
       "Microsoft.EntityFrameworkCore >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 8.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.0",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.0"
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.0",
+      "WebApiTaskTracker.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2321,13 +2337,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ordoo\\Documents\\GitHub_projects\\SigmaTrello\\WebApiTaskTracker\\WebApiTaskTracker.Domain\\WebApiTaskTracker.Domain.csproj": {
+              "projectPath": "C:\\Users\\ordoo\\Documents\\GitHub_projects\\SigmaTrello\\WebApiTaskTracker\\WebApiTaskTracker.Domain\\WebApiTaskTracker.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {

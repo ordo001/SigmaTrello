@@ -15,10 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\WebApiTaskTracker.Application\WebApiTaskTracker.Application.csproj" />
+    <ProjectReference Include="..\WebApiTaskTracker.Domain\WebApiTaskTracker.Domain.csproj" />
     <ProjectReference Include="..\WebApiTaskTracker.Infrastructure\WebApiTaskTracker.Infrastructure.csproj" />
   </ItemGroup>
 

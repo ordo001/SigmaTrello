@@ -104,3 +104,8 @@ C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTas
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\obj\Debug\net8.0\WebApiTaskTracker.Api.pdb
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\obj\Debug\net8.0\WebApiTaskTracker.Api.genruntimeconfig.cache
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\obj\Debug\net8.0\ref\WebApiTaskTracker.Api.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\obj\Debug\net8.0\WebApiTaskTracker.Api.sourcelink.json
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\bin\Debug\net8.0\WebApiTaskTracker.Domain.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\bin\Debug\net8.0\WebApiTaskTracker.Domain.pdb
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\bin\Debug\net8.0\WebApiTaskTracker.Application.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\bin\Debug\net8.0\WebApiTaskTracker.Application.pdb

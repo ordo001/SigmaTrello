@@ -9,3 +9,8 @@ C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTas
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Application\obj\Debug\net8.0\refint\WebApiTaskTracker.Application.dll
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Application\obj\Debug\net8.0\WebApiTaskTracker.Application.pdb
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Application\obj\Debug\net8.0\ref\WebApiTaskTracker.Application.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Application\bin\Debug\net8.0\WebApiTaskTracker.Domain.dll
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Application\bin\Debug\net8.0\WebApiTaskTracker.Domain.pdb
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Application\obj\Debug\net8.0\WebApiTaskTracker.Application.csproj.AssemblyReference.cache
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Application\obj\Debug\net8.0\WebApiTaskTracker.Application.sourcelink.json
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Application\obj\Debug\net8.0\WebApiTaskTracker.Application.csproj.CopyComplete
