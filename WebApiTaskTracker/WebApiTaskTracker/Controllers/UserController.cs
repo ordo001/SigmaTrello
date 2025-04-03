@@ -9,10 +9,12 @@ namespace WebApiTaskTracker.Api.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private IUserServices _userServices;
-        public UserController(IUserServices userServices)
+        private readonly IUserServices _userServices;
+        private readonly IValidatorService _validatorService;
+        public UserController(IUserServices userServices, IValidatorService validatorService)
         { 
             _userServices = userServices;
+            _validatorService = validatorService;
         }
 
         [HttpPost("/addUser")]
@@ -20,6 +22,13 @@ namespace WebApiTaskTracker.Api.Controllers
         {
             try
             {
+                // Валидация йоу
+                var validationResult = _validatorService.Validation(userRequest);
+                if (validationResult.Any())
+                {
+                    return BadRequest(validationResult);
+                }
+                
                 var result = await _userServices.AddUserAsync(
                     userRequest.Login,
                     userRequest.Password,
@@ -32,9 +41,9 @@ namespace WebApiTaskTracker.Api.Controllers
                 }
                 return BadRequest();
             }
-            catch
+            catch (Exception ex)
             {
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
     }

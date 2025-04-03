@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTaskTracker.Infrastru
 		{8B82658B-38A9-4911-BE37-CB1A8C8364D8} = {8B82658B-38A9-4911-BE37-CB1A8C8364D8}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTaskTracker.Tests", "WebApiTaskTracker.Tests\WebApiTaskTracker.Tests.csproj", "{55A656FD-0D43-4B6E-B67E-F2ACD8864CC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{E4D8FAEC-33D4-4B91-8F6A-F131541C234D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4D8FAEC-33D4-4B91-8F6A-F131541C234D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4D8FAEC-33D4-4B91-8F6A-F131541C234D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A656FD-0D43-4B6E-B67E-F2ACD8864CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A656FD-0D43-4B6E-B67E-F2ACD8864CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A656FD-0D43-4B6E-B67E-F2ACD8864CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A656FD-0D43-4B6E-B67E-F2ACD8864CC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,4 +15,4 @@ C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTas
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.sourcelink.json
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\bin\Debug\net8.0\WebApiTaskTracker.Domain.dll
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\bin\Debug\net8.0\WebApiTaskTracker.Domain.pdb
-C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTaskTracker.Infrastructure.csproj.CopyComplete
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker.Infrastructure\obj\Debug\net8.0\WebApiTa.334859D0.Up2Date

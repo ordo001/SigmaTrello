@@ -23,13 +23,13 @@ namespace WebApiTaskTracker.Api
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IBoardRepository, BoardRepository>();
             builder.Services.AddScoped<IUserBoardRepository, UserBoardRepository>();
+            builder.Services.AddScoped<IValidatorService, ValidatorService>();
 
             builder.Services.AddDbContext<TaskTrackerContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();

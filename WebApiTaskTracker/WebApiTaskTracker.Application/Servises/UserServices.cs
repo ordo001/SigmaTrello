@@ -18,6 +18,10 @@ namespace WebApiTaskTracker.Application.Servises
         }
         public async Task<Guid?> AddUserAsync(string login, string password, string name, string email)
         {
+            var result = await _userRepository.GetByLoginAsync(login);
+            if (result is not null)
+                throw new Exception(message: "Логин занят");
+            
             try
             {
                 var newUser = new User(login, password, name, email);
@@ -30,3 +34,4 @@ namespace WebApiTaskTracker.Application.Servises
         }
     }
 }
+

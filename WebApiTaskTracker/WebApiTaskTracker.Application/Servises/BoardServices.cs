@@ -26,9 +26,9 @@ namespace WebApiTaskTracker.Application.Servises
             {
                 var newBoard = new Board(name, description);
                 await _boardRepository.AddBoardAsync(newBoard);
-
+                
                 await _userBoardRepository.AddUserToBoardAsync(idOwner, newBoard.Id, "Admin");
-
+                
                 return newBoard.Id;
             }
             catch (Exception ex)
