@@ -12,10 +12,13 @@ namespace WebApiTaskTracker.Application.Servises
     public class UserServices : IUserServices
     {
         private readonly IUserRepository _userRepository;
-        public UserServices(IUserRepository userRepository)
+        private readonly IPasswordHasher _passwordHasher;
+        public UserServices(IUserRepository userRepository, IPasswordHasher passwordHasher)
         {
             _userRepository = userRepository;
+            _passwordHasher = passwordHasher;
         }
+        
         public async Task<Guid?> AddUserAsync(string login, string password, string name, string email)
         {
             var result = await _userRepository.GetByLoginAsync(login);
@@ -24,7 +27,9 @@ namespace WebApiTaskTracker.Application.Servises
             
             try
             {
-                var newUser = new User(login, password, name, email);
+                var passwordHash = _passwordHasher.HashPassword(password);
+                
+                var newUser = new User(login, passwordHash, name, email);
                 await _userRepository.AddUserAsync(newUser);
                 return newUser.Id;
             } catch (Exception ex)

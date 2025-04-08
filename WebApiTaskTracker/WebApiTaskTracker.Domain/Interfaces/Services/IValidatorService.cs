@@ -12,5 +12,5 @@ public interface IValidatorService
     /// <typeparam name="T">Тип объекта, подлежащего валидации.</typeparam>
     /// <param name="validationEntity">Объект, который нужно проверить.</param>
     /// <returns>Список результатов валидации. Если проверка успешна, возвращается пустой список.</returns>
-    public List<ValidationResult?> Validation<T>(T validationEntity);
+    public List<ValidationResult?> ValidationEntity<T>(T validationEntity);
 }

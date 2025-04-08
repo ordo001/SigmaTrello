@@ -17,7 +17,7 @@ namespace WebApiTaskTracker.Api.Controllers
             try
             {
                 // Валидация йоу
-                var validationResult = validatorService.Validation(addBoardRequest);
+                var validationResult = validatorService.ValidationEntity(addBoardRequest);
                 if (validationResult.Any())
                 {
                     return BadRequest(validationResult);

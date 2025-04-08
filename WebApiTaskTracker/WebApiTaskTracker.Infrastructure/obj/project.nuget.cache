@@ -46,5 +46,12 @@
     "C:\\Users\\ordoo\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\ordoo\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (127.0.0.1:3067)"
+    }
+  ]
 }
