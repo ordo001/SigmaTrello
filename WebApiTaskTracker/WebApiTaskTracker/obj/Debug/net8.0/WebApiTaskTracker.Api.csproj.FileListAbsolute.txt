@@ -109,3 +109,4 @@ C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTas
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\bin\Debug\net8.0\WebApiTaskTracker.Application.dll
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\bin\Debug\net8.0\WebApiTaskTracker.Application.pdb
 C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\obj\Debug\net8.0\WebApiTa.2B600AC1.Up2Date
+C:\Users\ordoo\Documents\GitHub_projects\SigmaTrello\WebApiTaskTracker\WebApiTaskTracker\bin\Debug\net8.0\BCrypt.Net-Next.dll

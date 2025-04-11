@@ -8,6 +8,7 @@ using WebApiTaskTracker.Domain.Interfaces;
 using WebApiTaskTracker.Domain.Interfaces.Repositories;
 using WebApiTaskTracker.Domain.Interfaces.Services;
 using WebApiTaskTracker.Domain.Models;
+using WebApiTaskTracker.Application.Exceptions;
 
 
 namespace WebApiTaskTracker.Application.Servises
@@ -21,7 +22,7 @@ namespace WebApiTaskTracker.Application.Servises
         {
             var result = await _userRepository.GetByIdAsync(idOwner);
             if (result is null)
-                throw new Exception(message: "Пользователь не найден");
+                throw new EntityNotFoundException<User>(idOwner);
             try
             {
                 var newBoard = new Board(name, description);
@@ -33,7 +34,7 @@ namespace WebApiTaskTracker.Application.Servises
             }
             catch (Exception ex)
             {
-                return null;
+                throw new Exception(ex.Message);
             }
         }
 
