@@ -1,0 +1,53 @@
+.WorkSpace {
+  padding-left: 24px;
+  padding-left: 24px;
+  margin: 0;
+  width: 320px;
+  height: 200px;
+  display: flex;
+}
+
+.WorkSpaceCard {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.WorkSpaceCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.WorkSpaceImage {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  filter: blur(4px);
+  transform: scale(1.1);
+}
+
+.Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.WorkSpaceTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+}

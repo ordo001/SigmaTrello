@@ -1,0 +1,24 @@
+.WorkSpaceMini {
+  display: flex;
+  align-items: center;
+  background-color: #242424;
+  padding-left: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.WorkSpaceMini:hover {
+  background-color: #414141;
+}
+
+.WorkSpaceMiniImage {
+  height: 34px;
+  width: 34px;
+  object-fit: cover;
+}
+
+.Name {
+  padding-left: 20px;
+}
