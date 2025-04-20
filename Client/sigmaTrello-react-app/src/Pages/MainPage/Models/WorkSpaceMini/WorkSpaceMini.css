@@ -1,11 +1,12 @@
 .WorkSpaceMini {
   display: flex;
   align-items: center;
-  background-color: #242424;
+  /* background-color: #242424; */
   padding-left: 12px;
   margin-bottom: 12px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   cursor: pointer;
+  width: 100%;
   transition: background 0.2s ease-in-out;
 }
 

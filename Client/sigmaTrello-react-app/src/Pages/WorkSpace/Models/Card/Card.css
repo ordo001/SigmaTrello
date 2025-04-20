@@ -1,0 +1,13 @@
+.Card {
+  background-color: #33363d;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.Card:hover {
+  background-color: #44484f;
+}

@@ -6,6 +6,7 @@ import useAuth from "./Func/useAuth";
 import Login from "./Pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./Pages/MainPage/MainPage";
+import WorkSpacePage from "./Pages/WorkSpace/WorkSpacePage";
 
 function App() {
   //const [count, setCount] = useState(0);
@@ -16,6 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/mainPage" element={<MainPage />} />
+          <Route path="/workSpacePage" element={<WorkSpacePage />} />
         </Routes>
       </BrowserRouter>
     </>

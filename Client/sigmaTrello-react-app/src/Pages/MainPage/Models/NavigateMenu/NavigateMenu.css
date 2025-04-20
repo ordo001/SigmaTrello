@@ -1,15 +1,18 @@
 .Menu {
   width: 270px;
-  background-color: #2d2d2d;
+  background-color: #1d2125;
   color: white;
-  padding: 20px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  border: 0.1px solid rgb(75, 75, 75);
+  border-top: 0;
+  /* overflow-y: auto; */
+  max-height: 100%;
 }
 
 .MenuTitle {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: bold;
+  margin-left: 15%;
 }
