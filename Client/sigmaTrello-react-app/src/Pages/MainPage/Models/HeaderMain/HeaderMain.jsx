@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 //import "../../../../App.css";
 import "./HeaderMain.css";
@@ -6,6 +6,7 @@ import logo from "../../../../assets/3613-pepe-with-jesus.png";
 import { FaSearch, FaQuestionCircle } from "react-icons/fa";
 
 export default function HeaderMain() {
+  const navigate = useNavigate();
   return (
     <header className="Header">
       <div className="header-left">

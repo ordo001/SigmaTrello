@@ -1,5 +1,5 @@
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useState, useCallback, useEffect } from "react";
 import "../../App.css";
 import "./WorkSpacePage.css";
 import HeaderWorkSpace from "./Models/HeaderWorkSpace/HeaderWorkSpace";
@@ -10,14 +10,47 @@ import Section from "./Models/Section/Section";
 import PanelWorkSpace from "./Models/PanelWorkSpace/PanelWorkSpace";
 import Card from "./Models/Card/Card";
 export default function WorkSpacePage() {
+  const [workSpaces, setWorkSpaces] = useState([]);
+  const navigate = useNavigate();
+
+  const fetchWorkSpaces = useCallback(async () => {
+    const response = await fetch("http://localhost:5208/Boards", {
+      method: "GET",
+    });
+    const workSpaces = await response.json();
+    if (response.status === 200) setWorkSpaces(workSpaces);
+
+    // console.log(workSpaces);
+  }, []);
+
+  useEffect(() => {
+    fetchWorkSpaces();
+  }, [fetchWorkSpaces]);
+
   return (
     <div className="WorkSpacePage">
       <HeaderWorkSpace />
       <div className="MainContent">
         <NavigateMenu>
-          <WorkSpaceMini />
-          <WorkSpaceMini />
-          <WorkSpaceMini />
+          {workSpaces.length > 0 ? (
+            workSpaces.map((workSpace) => (
+              <WorkSpaceMini
+                workSpace={workSpace}
+                onClick={() => navigate("/b/" + workSpace.id)}
+                key={workSpace.id}
+              />
+            ))
+          ) : (
+            <p
+              style={{
+                textAlign: "center",
+                fontSize: "24px",
+                marginTop: "20px",
+              }}
+            >
+              Досок нет
+            </p>
+          )}
         </NavigateMenu>
 
         <PanelWorkSpace>

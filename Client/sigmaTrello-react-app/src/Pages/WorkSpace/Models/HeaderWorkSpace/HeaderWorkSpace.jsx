@@ -1,14 +1,22 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 //import "../../../../App.css";
 import logo from "../../../../assets/3613-pepe-with-jesus.png";
 import { FaSearch, FaQuestionCircle } from "react-icons/fa";
 
 export default function HeaderWorkSpace() {
+  const navigate = useNavigate();
   return (
     <header className="Header">
       <div className="header-left">
-        <img src={logo} alt="Logo" className="logo" />
+        <img
+          src={logo}
+          alt="Logo"
+          className="logo"
+          onClick={() => {
+            navigate("/");
+          }}
+        />
         <h3 className="NameApp">SigmaTrello</h3>
       </div>
 

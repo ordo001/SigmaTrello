@@ -16,8 +16,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/mainPage" element={<MainPage />} />
-          <Route path="/workSpacePage" element={<WorkSpacePage />} />
+          <Route path="/" element={<MainPage />} />
+          {/* <Route path="/workSpacePage" element={<WorkSpacePage />} /> */}
+          <Route path="/b/:id" element={<WorkSpacePage />} />
         </Routes>
       </BrowserRouter>
     </>
