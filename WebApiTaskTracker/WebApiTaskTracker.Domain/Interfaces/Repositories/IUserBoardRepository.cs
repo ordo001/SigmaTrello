@@ -7,6 +7,9 @@ using WebApiTaskTracker.Domain.Models;
 
 namespace WebApiTaskTracker.Domain.Interfaces.Repositories
 {
+    /// <summary>
+    /// Репозиторий для работы с пользователями и досками
+    /// </summary>
     public interface IUserBoardRepository
     {
         /// <summary>

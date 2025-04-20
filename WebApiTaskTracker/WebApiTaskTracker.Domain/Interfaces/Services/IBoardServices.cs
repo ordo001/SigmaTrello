@@ -10,6 +10,17 @@ namespace WebApiTaskTracker.Domain.Interfaces.Services
     public interface IBoardServices
     {
         /// <summary>
+        /// Получить все доски пользователя
+        /// </summary>
+        /// <param name="idUser"></param>
+        /// <returns></returns>
+        Task<List<Board>> GetUserBoards(Guid idUser);
+        /// <summary>
+        /// Получить все доски
+        /// </summary>
+        /// <returns></returns>
+        Task<List<Board>> GetBoards();
+        /// <summary>
         /// Создать новую доску без пользователей
         /// </summary>
         /// <param name="name"></param>

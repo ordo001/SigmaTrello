@@ -18,6 +18,28 @@ namespace WebApiTaskTracker.Application.Servises
         IBoardRepository _boardRepository,
         IUserRepository _userRepository) : IBoardServices
     {
+        public async Task<List<Board>> GetUserBoards(Guid idUser)
+        {
+            try
+            {
+                return await _userBoardRepository.GetBoardsByUserIdAsync(idUser);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public async Task<List<Board>> GetBoards()
+        {
+            try
+            {
+                return await _boardRepository.GetBoardsAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public async Task<Guid?> AddBoard(string name, string description, Guid idOwner)
         {
             var result = await _userRepository.GetByIdAsync(idOwner);

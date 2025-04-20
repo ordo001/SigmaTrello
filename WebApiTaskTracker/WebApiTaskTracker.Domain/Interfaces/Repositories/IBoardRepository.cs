@@ -8,7 +8,7 @@ using WebApiTaskTracker.Domain.Models;
 namespace WebApiTaskTracker.Domain.Interfaces.Repositories
 {
     /// <summary>
-    /// Интерфейс для работы с объектами досок (Board) в хранилище данных.
+    /// Репозиторий для работы с объектами досок
     /// </summary>
     public interface IBoardRepository
     {

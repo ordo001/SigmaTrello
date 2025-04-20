@@ -11,6 +11,11 @@ namespace WebApiTaskTracker.Api.Controllers
     [ApiController]
     public class BoardController(IBoardServices boardServices, IValidatorService validatorService) : ControllerBase
     {
+        /// <summary>
+        /// Создает новую доску
+        /// </summary>
+        /// <param name="addBoardRequest"></param>
+        /// <returns></returns>
         [HttpPost("/addBoard")]
         public async Task<IActionResult> AddBoard([FromBody] AddBoardRequest addBoardRequest)
         {
@@ -35,7 +40,11 @@ namespace WebApiTaskTracker.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        /// <summary>
+        /// Добавляет пользователя в доску
+        /// </summary>
+        /// <param name="addUserInBoardRequest"></param>
+        /// <returns></returns>
         [HttpPost("/addUserInBoard")]
         public async Task<IActionResult> AddUserInBoard([FromBody] AddUserInBoardRequest addUserInBoardRequest)
         {
@@ -58,5 +67,40 @@ namespace WebApiTaskTracker.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        /// <summary>
+        /// Вовзращает все доски
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("/Boards")]
+        public async Task<IActionResult> GetBoards()
+        {
+            try
+            {
+                var result = await boardServices.GetBoards();
+                return Ok(result);
+            }catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        /// <summary>
+        /// Возвращает доски пользователя
+        /// </summary>
+        /// <param name="idUser"></param>
+        /// <returns></returns>
+        [HttpGet("/UserBoards")]
+        public async Task<IActionResult> GetUserBoards(Guid idUser)
+        {
+            try
+            {
+                var result = await boardServices.GetUserBoards(idUser);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        
     }
 }

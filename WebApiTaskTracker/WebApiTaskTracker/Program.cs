@@ -41,6 +41,13 @@ namespace WebApiTaskTracker.Api
 
             app.UseAuthorization();
 
+            app.UseCors(x =>
+            {
+                x.WithHeaders().AllowAnyHeader();
+                x.WithOrigins("http://localhost:5173");
+                x.WithMethods().AllowAnyMethod();
+                x.AllowCredentials();
+            });
 
             app.MapControllers();
 
