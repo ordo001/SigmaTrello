@@ -23,7 +23,8 @@ SigmeTrello — это веб-приложение для управления �
 ### Frontend
 - [React.js]
 - [Vite] — сборщик проекта
-- [React Router]
+- [React Router] - Маршрутизация
+- [React beautiful dnd] - реализация drag-and-drop
 
 ### Backend
 - [ASP.NET Core Web API]
