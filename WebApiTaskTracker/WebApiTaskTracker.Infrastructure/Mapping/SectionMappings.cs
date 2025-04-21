@@ -19,5 +19,17 @@ namespace WebApiTaskTracker.Infrastructure.Mapping
                 section.Cards.Select(c => c.ToDomain()).ToList()
                 );
         }
+        
+        public static Data.Section ToEntity(this Domain.Models.Section section)
+        {
+            return new Data.Section
+            {
+                Id = section.Id,
+                IdBoard = section.IdBoard,
+                Position = section.Position,
+                Name = section.Name,
+                Cards = section.Cards.Select(c => c.ToEntity()).ToList()
+            };
+        }
     }
 }

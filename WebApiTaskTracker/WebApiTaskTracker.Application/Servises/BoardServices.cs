@@ -88,11 +88,11 @@ namespace WebApiTaskTracker.Application.Servises
             
             var user = await _userRepository.GetByIdAsync(idUser);
             if (user is null)
-                throw new Exception("Пользователь не найден");
+                throw new EntityNotFoundException<User>(idUser);
 
             var board = await _boardRepository.GetByIdAsync(idBoard);
             if (board is null)
-                throw new Exception("Доска не найдена");
+                throw new EntityNotFoundException<Board>(idBoard);
 
             try
             {

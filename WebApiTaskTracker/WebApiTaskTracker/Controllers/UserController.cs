@@ -17,7 +17,7 @@ namespace WebApiTaskTracker.Api.Controllers
             _validatorService = validatorService;
         }
 
-        [HttpPost("/addUser")]
+        [HttpPost("/users")]
         public async Task<IActionResult> AddUser([FromBody] AddUserRequest userRequest)
         {
             try

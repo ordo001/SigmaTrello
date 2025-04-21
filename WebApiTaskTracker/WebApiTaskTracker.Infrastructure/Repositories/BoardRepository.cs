@@ -43,7 +43,7 @@ namespace WebApiTaskTracker.Infrastructure.Repositories
             {
                 return board.ToDomain();
             }
-            throw new Exception(message: "Доска не найдена");
+            return null; 
         }
 
         public async Task RemoveBoardAsync(Guid id)

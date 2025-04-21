@@ -7,6 +7,14 @@ namespace WebApiTaskTracker.Domain.Interfaces.Repositories;
 public interface ISectionRepository
 {
     /// <summary>
+    /// Обновить позицию секций
+    /// </summary>
+    /// <param name="sectionId"></param>
+    /// <param name="position"></param>
+    /// <returns></returns>
+    //TODO: СДЕЛАТЬ ПРАВИЛЬНО БЛЯ, ЧТОБЫ МОЖНО БЫЛО ИЗМЕНИТЬ ПОЗИЦИЮ ВСЕХ СЕКЦИЙ НА ДОСКЕ
+    Task<Section> UpdatePositonSections(Guid sectionId, int position);
+    /// <summary>
     /// Получить все секции доски
     /// </summary>
     /// <param name="idBoard"></param>
@@ -20,7 +28,13 @@ public interface ISectionRepository
     /// <summary>
     /// Удалить секцию
     /// </summary>
-    /// <param name="boardId"></param>
+    /// <param name="section"></param>
     /// <returns></returns>
-    Task RemoveSection(Guid boardId);
+    Task RemoveSection(Section section);
+    /// <summary>
+    /// Получить секцию по id
+    /// </summary>
+    /// <param name="sectionId"></param>
+    /// <returns></returns>
+    Task<Section> GetSectionById(Guid sectionId);
 }

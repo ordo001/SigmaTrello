@@ -16,7 +16,7 @@ namespace WebApiTaskTracker.Api.Controllers
         /// </summary>
         /// <param name="addBoardRequest"></param>
         /// <returns></returns>
-        [HttpPost("/addBoard")]
+        [HttpPost("/boards")]
         public async Task<IActionResult> AddBoard([FromBody] AddBoardRequest addBoardRequest)
         {
             try
@@ -45,7 +45,7 @@ namespace WebApiTaskTracker.Api.Controllers
         /// </summary>
         /// <param name="addUserInBoardRequest"></param>
         /// <returns></returns>
-        [HttpPost("/addUserInBoard")]
+        [HttpPost("/boards/{idBoard}/users")]
         public async Task<IActionResult> AddUserInBoard([FromBody] AddUserInBoardRequest addUserInBoardRequest)
         {
             try
@@ -71,7 +71,7 @@ namespace WebApiTaskTracker.Api.Controllers
         /// Вовзращает все доски
         /// </summary>
         /// <returns></returns>
-        [HttpGet("/Boards")]
+        [HttpGet("/boards")]
         public async Task<IActionResult> GetBoards()
         {
             try
@@ -88,7 +88,7 @@ namespace WebApiTaskTracker.Api.Controllers
         /// </summary>
         /// <param name="idUser"></param>
         /// <returns></returns>
-        [HttpGet("/UserBoards")]
+        [HttpGet("/boards/{idUser}/boards")]
         public async Task<IActionResult> GetUserBoards(Guid idUser)
         {
             try

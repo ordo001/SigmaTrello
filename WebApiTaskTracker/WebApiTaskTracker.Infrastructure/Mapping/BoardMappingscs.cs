@@ -16,7 +16,7 @@ namespace WebApiTaskTracker.Infrastructure.Mapping
     {
         public static Domain.Models.Board ToDomain(this Data.Board board)
         {
-            return new Domain.Models.Board(board.Name, board.Description, board.UserBoards.Select(s => s.ToDomain()).ToList());
+            return new Domain.Models.Board(board.Id,board.Name, board.Description, board.UserBoards.Select(s => s.ToDomain()).ToList());
         }
 
         public static Data.Board ToEntity(this Domain.Models.Board board)

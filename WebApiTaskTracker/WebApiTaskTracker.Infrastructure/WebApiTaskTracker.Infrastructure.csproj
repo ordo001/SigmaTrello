@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WebApiTaskTracker.Application\WebApiTaskTracker.Application.csproj" />
     <ProjectReference Include="..\WebApiTaskTracker.Domain\WebApiTaskTracker.Domain.csproj" />
   </ItemGroup>
 

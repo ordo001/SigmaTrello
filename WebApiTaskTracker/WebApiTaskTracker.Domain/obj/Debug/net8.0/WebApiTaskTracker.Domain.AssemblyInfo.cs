@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApiTaskTracker.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c34bb8fe702b966352f512291bfa95bb3d83ac6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9aa6cd01eb0c4faf7133953aedc8f5705f8e8e5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApiTaskTracker.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApiTaskTracker.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

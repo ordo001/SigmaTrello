@@ -25,6 +25,8 @@ namespace WebApiTaskTracker.Api
             builder.Services.AddScoped<IUserBoardRepository, UserBoardRepository>();
             builder.Services.AddScoped<IValidatorService, ValidatorService>();
             builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+            builder.Services.AddScoped<ISectionRepository, SectionRepository>();
+            builder.Services.AddScoped<ISectionServices, SectionService>();
 
             builder.Services.AddDbContext<TaskTrackerContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
