@@ -1,0 +1,18 @@
+.MenuWorkSpace {
+  width: 342px;
+  background-color: #1d2125;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border: 0.1px solid rgb(75, 75, 75);
+  border-top: 0;
+  /* overflow-y: auto; */
+  max-height: 100%;
+}
+
+.MenuTitleWorkSpace {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 15%;
+}

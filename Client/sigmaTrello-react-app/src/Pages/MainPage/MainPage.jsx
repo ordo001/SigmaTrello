@@ -15,13 +15,13 @@ export default function MainPage() {
   const navigate = useNavigate();
 
   const fetchWorkSpaces = useCallback(async () => {
-    const response = await fetch("http://localhost:5208/Boards", {
+    const response = await fetch("http://localhost:5208/boards", {
       method: "GET",
     });
     const workSpaces = await response.json();
-    if (response.status === 200) setWorkSpaces(workSpaces);
-
-    // console.log(workSpaces);
+    if (response.status === 200) {
+      setWorkSpaces(workSpaces);
+    }
   }, []);
 
   useEffect(() => {
