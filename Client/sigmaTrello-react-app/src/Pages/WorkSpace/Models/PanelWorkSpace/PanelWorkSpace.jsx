@@ -1,26 +1,69 @@
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import "./PanelWorkSpace.css";
 import Section from "../Section/Section";
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function PanelWorkSpace({
   sections = [],
   setSections,
   onReorder,
 }) {
+  const [creating, setCreating] = useState(false);
+  const [newSectionName, setNewSectionName] = useState("");
+  const location = useLocation();
+
+  const workSpaceId = location.pathname.split("/")[2];
+
   const handleDragEnd = (result) => {
     if (!result.destination) return;
 
-    const reordered = Array.from(sections);
-    const [moved] = reordered.splice(result.source.index, 1);
-    reordered.splice(result.destination.index, 0, moved);
+    const sourceIndex = result.source.index;
+    const destinationIndex = result.destination.index;
 
-    const updated = reordered.map((sec, index) => ({
-      ...sec,
+    const reordered = Array.from(sections);
+    const [movedSection] = reordered.splice(sourceIndex, 1);
+    reordered.splice(destinationIndex, 0, movedSection);
+
+    const updatedSections = reordered.map((section, index) => ({
+      ...section,
       position: index,
     }));
 
-    setSections(updated);
-    onReorder(updated);
+    setSections(updatedSections);
+    onReorder(updatedSections);
+  };
+
+  const handleCreateSection = async () => {
+    var maxIndex = Math.max(...sections.map((s) => s.position));
+    var position = sections.length > 0 ? maxIndex + 1 : 0;
+
+    const response = await fetch(
+      `http://localhost:5208/boards/${workSpaceId}/sections`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: newSectionName,
+          position: position,
+        }),
+      }
+    );
+
+    if (response.ok) {
+      const createdSection = await response.json();
+      setSections([...sections, createdSection]);
+      setNewSectionName("");
+      setCreating(false);
+    }
+  };
+
+  const handleTextareaChange = (e) => {
+    e.target.style.height = "auto";
+    e.target.style.height = e.target.scrollHeight + "px";
+    setNewSectionName(e.target.value);
   };
 
   return (
@@ -58,6 +101,46 @@ export default function PanelWorkSpace({
             ))}
 
             {provided.placeholder}
+
+            {/* типа компонент создания секции */}
+            <div className="CreateSectionWrapper">
+              {creating ? (
+                <div className="CreateSection">
+                  <textarea
+                    type="text"
+                    value={newSectionName}
+                    onChange={handleTextareaChange}
+                    placeholder="Название секции"
+                    className="SectionInput"
+                  />
+                  <div className="CreateSectionActions">
+                    <button
+                      onClick={
+                        newSectionName.length > 0 ? handleCreateSection : null
+                      }
+                      className="CreateSectionButton"
+                    >
+                      Создать
+                    </button>
+                    <button
+                      onClick={() => {
+                        setCreating(false);
+                        setNewSectionName("");
+                      }}
+                    >
+                      ✕
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <button
+                  className="AddSectionButton"
+                  onClick={() => setCreating(true)}
+                >
+                  + Добавить новую секцию
+                </button>
+              )}
+            </div>
           </div>
         )}
       </Droppable>

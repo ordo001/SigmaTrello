@@ -1,7 +1,7 @@
 .Section {
   width: 280px;
-  background-color: #202020;
-  border-radius: 12px;
+  background-color: #1b1b1b;
+  border-radius: 14px;
   padding: 12px;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@
 .SectionHeader {
   font-size: 16px;
   font-weight: bold;
+  height: 100%;
   color: white;
   margin-bottom: 12px;
   padding: 0 8px;
@@ -27,4 +28,25 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+/* .Card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+} */
+
+.CardName {
+  font-weight: 600;
+}
+
+.CardContent {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.EmptyCards {
+  color: #999;
+  font-style: italic;
 }

@@ -28,3 +28,111 @@
   background-color: #555;
   border-radius: 4px;
 }
+
+.SectionWrapper {
+  overflow: visible;
+}
+
+.CreateSectionWrapper {
+  min-width: 280px;
+}
+
+SectionWrapper {
+  overflow: visible;
+}
+
+.CreateSectionWrapper {
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.CreateSection {
+  background-color: #1b1b1b;
+  padding: 10px;
+  padding-bottom: 8px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* .SectionInput {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: #21272c;
+  border: 0.1px solid rgb(75, 75, 75);
+  font-size: 14px;
+  box-sizing: border-box;
+} */
+
+.SectionInput {
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  font-size: 15px;
+  padding: 8px 10px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 0.1px solid rgb(75, 75, 75);
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.SectionInput:focus {
+  border-color: #579dff;
+}
+
+.CreateSectionActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CancelButton {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #bbbbbb70;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+
+.CancelButton:hover {
+  color: #fff;
+}
+
+.AddSectionButton {
+  background-color: #ffffff3d;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 12px;
+  min-width: 280px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.AddSectionButton:hover {
+  background-color: #ffffff27;
+}
+
+.CreateSectionButton {
+  font-size: 13px;
+  border-radius: 5px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #579dff;
+}
+
+.CreateSectionButton:hover {
+  background-color: #579dff98;
+}

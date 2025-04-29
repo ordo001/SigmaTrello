@@ -20,7 +20,6 @@ export default function WorkSpacePage() {
 
   const workSpaceId = location.pathname.split("/")[2];
 
-  // Загрузка всех доступных workSpaces
   useEffect(() => {
     const fetchWorkSpaces = async () => {
       const response = await fetch("http://localhost:5208/Boards");
@@ -34,7 +33,6 @@ export default function WorkSpacePage() {
     fetchWorkSpaces();
   }, []);
 
-  // Обновление текущего workSpace при изменении workSpaces или workSpaceId
   useEffect(() => {
     if (workSpaces.length === 0) return;
 
@@ -43,7 +41,6 @@ export default function WorkSpacePage() {
     setCurrentWorkSpace(found);
   }, [workSpaces, workSpaceId]);
 
-  // Загрузка секций при изменении currentWorkSpace
   useEffect(() => {
     if (!currentWorkSpace?.id) return;
 
@@ -55,22 +52,33 @@ export default function WorkSpacePage() {
 
       if (response.status === 200) {
         setSections(data);
-        // console.log(sections);
       }
     };
-
+    // console.log(sections);
     fetchSections();
   }, [currentWorkSpace]);
 
   const handleSectionReorder = async (updatedSections) => {
-    for (const section of updatedSections) {
-      await fetch(`http://localhost:5208/sections/${section.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ position: section.position }),
-      });
+    try {
+      await Promise.all(
+        updatedSections.map((section) =>
+          fetch(`http://localhost:5208/sections/${section.id}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(section.position),
+          }).then((response) => {
+            if (!response.ok) {
+              return response.text().then((text) => {
+                throw new Error(`Ошибка для секции ${section.id}: ${text}`);
+              });
+            }
+          })
+        )
+      );
+    } catch (error) {
+      console.error("Произошла ошибка при обновлении секций:", error.message);
     }
   };
 
@@ -91,16 +99,6 @@ export default function WorkSpacePage() {
             <p className="no-boards">Досок нет</p>
           )}
         </NavigateMenuWorkSpace>
-
-        {/* <PanelWorkSpace>
-          {sections.length > 0 ? (
-            sections.map((section) => (
-              <Section section={section} key={section.id} />
-            ))
-          ) : (
-            <p className="no-sections">Нет секций</p>
-          )}
-        </PanelWorkSpace> */}
         <PanelWorkSpace
           sections={sections}
           setSections={setSections}
