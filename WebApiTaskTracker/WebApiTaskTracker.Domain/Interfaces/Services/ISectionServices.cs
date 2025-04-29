@@ -16,7 +16,7 @@ public interface ISectionServices
     /// </summary>
     /// <param name="boardId">id доски</param>
     /// <returns>Список секций</returns>
-    Task<List<Section>> GetSectionBoard(Guid boardId);
+    Task<List<Section>> GetSectionWithCardsBoardAsync(Guid boardId);
     /// <summary>
     /// Получить секцию по id
     /// </summary>
@@ -31,7 +31,7 @@ public interface ISectionServices
     /// <param name="position"></param>
     /// <param name="boardId"></param>
     /// <returns></returns>
-    Task<Section> AddSectionAsync(string name, string description, int position, Guid boardId);
+    Task<Section> AddSectionAsync(string name, int position, Guid boardId);
     /*Task<Section> UpdateSectionAsync(Section section);*/
     /// <summary>
     /// Удалить секцию по id
@@ -39,4 +39,5 @@ public interface ISectionServices
     /// <param name="id"></param>
     /// <returns></returns>
     Task DeleteSectionAsync(Guid id);
+    Task UpdatePositionSectionAsync(Guid sectionId, int newPosition);
 }

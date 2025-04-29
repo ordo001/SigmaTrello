@@ -2,6 +2,6 @@ namespace WebApiTaskTracker.Domain.DTO;
 
 public class UpdatePositionSectionRequest
 {
-    Guid IdSection { get; set; }
-    int Position { get; set; }
+    public Guid IdSection { get; set; }
+    public int Position { get; set; }
 }

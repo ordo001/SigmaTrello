@@ -10,29 +10,30 @@ namespace WebApiTaskTracker.Infrastructure.Repositories;
 
 public class SectionRepository(TaskTrackerContext taskTrackerContext) : ISectionRepository
 {
-    public Task<Section> UpdatePositonSections(Guid sectionId, int position)
+    public async Task UpdateSection(Section section)
     {
-        throw new NotImplementedException();
+        taskTrackerContext.Sections.Update(section.ToEntity());
+        await taskTrackerContext.SaveChangesAsync();
     }
 
-    public async Task<List<Domain.Models.Section>> GetBoardSection(Guid boardId)
+    public async Task<List<Domain.Models.Section>> GetBoardSectionWithCards(Guid boardId)
     {
         var sections = await taskTrackerContext.Sections
             .AsNoTracking()
+            .Include(s => s.Cards)
             .Where(s => s.IdBoard == boardId)
             .ToListAsync();
 
         return sections.Select(s => s.ToDomain()).ToList();
     }
 
-    public async Task<Domain.Models.Section> AddSection(Guid boardId, string name, string description, int position)
+    public async Task<Domain.Models.Section> AddSection(Guid boardId, string name, int position)
     {
         var section = new Data.Section
         {
             Id = Guid.NewGuid(),
             IdBoard = boardId,
             Name = name,
-            Description = description,
             Position = position
         };
         await taskTrackerContext.Sections.AddAsync(section);
@@ -50,6 +51,7 @@ public class SectionRepository(TaskTrackerContext taskTrackerContext) : ISection
     public async Task<Section> GetSectionById(Guid sectionId)
     {
         var section = await taskTrackerContext.Sections
+            .AsNoTracking()
             .FirstOrDefaultAsync(s => s.Id == sectionId);
         if (section is not null)
         {

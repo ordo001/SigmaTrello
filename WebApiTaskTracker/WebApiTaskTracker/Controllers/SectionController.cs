@@ -12,24 +12,25 @@ namespace WebApiTaskTracker.Api.Controllers
     public class SectionController(ISectionServices sectionService, IValidatorService validatorService) : ControllerBase
     {
         [HttpPatch("/sections/{idSection}")]
-        public async Task<IActionResult> UpdatePositionSection(
-            [FromBody] UpdatePositionSectionRequest updateSectionRequest)
-        {//TODO: СДЕЛАТЬ ПРАВИЛЬНО БЛЯ, ЧТОБЫ МОЖНО БЫЛО ИЗМЕНИТЬ ПОЗИЦИЮ ВСЕХ СЕКЦИЙ НА ДОСКЕ
-            try
-            {
-                throw new Exception();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception();
-            }
-        }
-        [HttpGet("/boards/{idBoard}/sections")]
-        public async Task<IActionResult> GetSectionBoard(Guid idBoard)
+        public async Task<IActionResult> UpdatePositionSection(Guid idSection,
+            [FromBody] int sectionPosition)
         {
             try
             {
-                var result = await sectionService.GetSectionBoard(idBoard);
+                await sectionService.UpdatePositionSectionAsync(idSection, sectionPosition);
+                return Ok(); 
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet("/boards/{idBoard}/sections")]
+        public async Task<IActionResult> GetSectionWithCardsBoardAsync(Guid idBoard)
+        {
+            try
+            {
+                var result = await sectionService.GetSectionWithCardsBoardAsync(idBoard);
                 return Ok(result);
             }
             catch (Exception ex) when(ex.GetType().IsGenericType &&
@@ -42,6 +43,8 @@ namespace WebApiTaskTracker.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        
+        
 
         [HttpPost("/boards/{idBoard}/sections")]
         public async Task<IActionResult> AddSection([FromBody] AddSectionRequest addSectionRequest, Guid idBoard)
@@ -56,7 +59,6 @@ namespace WebApiTaskTracker.Api.Controllers
 
 
                 var section = await sectionService.AddSectionAsync(addSectionRequest.Name,
-                    addSectionRequest.Description,
                     addSectionRequest.Position,
                     idBoard);
                 return Ok(section);

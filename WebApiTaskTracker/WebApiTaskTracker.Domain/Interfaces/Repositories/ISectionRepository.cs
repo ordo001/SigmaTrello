@@ -7,24 +7,23 @@ namespace WebApiTaskTracker.Domain.Interfaces.Repositories;
 public interface ISectionRepository
 {
     /// <summary>
-    /// Обновить позицию секций
+    /// Обновить секцию
     /// </summary>
-    /// <param name="sectionId"></param>
-    /// <param name="position"></param>
+    /// <param name="section"></param>
+    /// <param name="newPosition"></param>
     /// <returns></returns>
-    //TODO: СДЕЛАТЬ ПРАВИЛЬНО БЛЯ, ЧТОБЫ МОЖНО БЫЛО ИЗМЕНИТЬ ПОЗИЦИЮ ВСЕХ СЕКЦИЙ НА ДОСКЕ
-    Task<Section> UpdatePositonSections(Guid sectionId, int position);
+    Task UpdateSection(Section section);
     /// <summary>
     /// Получить все секции доски
     /// </summary>
     /// <param name="idBoard"></param>
     /// <returns></returns>
-    Task<List<Section>> GetBoardSection(Guid boardId);
+    Task<List<Section>> GetBoardSectionWithCards(Guid boardId);
     /// <summary>
     /// Добавить новую секцию в доску
     /// </summary>
     /// <returns></returns>
-    Task<Section> AddSection(Guid boardId, string name, string description, int position);
+    Task<Section> AddSection(Guid boardId, string name, int position);
     /// <summary>
     /// Удалить секцию
     /// </summary>

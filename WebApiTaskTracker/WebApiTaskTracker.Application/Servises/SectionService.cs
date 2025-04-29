@@ -24,7 +24,7 @@ public class SectionService(ISectionRepository sectionRepository, IBoardReposito
         }
     }
 
-    public async Task<List<Section>> GetSectionBoard(Guid boardId)
+    public async Task<List<Section>> GetSectionWithCardsBoardAsync(Guid boardId)
     {
         var result = await boardRepository.GetByIdAsync(boardId);
         if (result is null)
@@ -34,7 +34,7 @@ public class SectionService(ISectionRepository sectionRepository, IBoardReposito
         
         try
         {
-            var sections = await sectionRepository.GetBoardSection(boardId);
+            var sections = await sectionRepository.GetBoardSectionWithCards(boardId);
             return sections.OrderBy(s => s.Position).ToList();
 
         }
@@ -44,7 +44,7 @@ public class SectionService(ISectionRepository sectionRepository, IBoardReposito
         }
     }
 
-    public async Task<Section> AddSectionAsync(string name, string description, int position, Guid boardId)
+    public async Task<Section> AddSectionAsync(string name, int position, Guid boardId)
     {
         var result = await boardRepository.GetByIdAsync(boardId);
         if (result is null)
@@ -52,7 +52,7 @@ public class SectionService(ISectionRepository sectionRepository, IBoardReposito
         
         try
         {
-            return await sectionRepository.AddSection(boardId, name, description, position);
+            return await sectionRepository.AddSection(boardId, name, position);
         }
         catch (Exception ex)
         {
@@ -63,5 +63,21 @@ public class SectionService(ISectionRepository sectionRepository, IBoardReposito
     public Task DeleteSectionAsync(Guid id)
     {
         throw new NotImplementedException();
+    }
+
+    public async Task UpdatePositionSectionAsync(Guid sectionId, int newPosition)
+    {
+        var section = await sectionRepository.GetSectionById(sectionId);
+        if (section is null)
+            throw new EntityNotFoundException<Section>(sectionId);
+        try
+        {
+            section.Position = newPosition;
+            await sectionRepository.UpdateSection(section);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
     }
 }
