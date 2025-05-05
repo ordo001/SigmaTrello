@@ -1,13 +1,14 @@
 .Card {
-  background-color: #33363d;
+  background-color: #22272b;
   color: white;
   padding: 10px 12px;
+  border: 1px solid transparent;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 .Card:hover {
-  background-color: #44484f;
+  border-color: #6d747e;
 }
